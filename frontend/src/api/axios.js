@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://microblog-k5e9.onrender.com/',
+  baseURL: 'https://microblog-k5e9.onrender.com',
   headers: { 'Content-Type': 'application/json' },
   withCredentials: true
 });
