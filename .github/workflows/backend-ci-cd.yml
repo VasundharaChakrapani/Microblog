@@ -21,12 +21,10 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Build & Test Backend
+      - name: Build & Test Backend (Maven)
         run: |
           cd microblog
-          chmod +x mvnw
-          sed -i 's/\r$//' mvnw
-          ./mvnw clean test
+          mvn clean test
 
       - name: Deploy Backend to Render
         run: |
