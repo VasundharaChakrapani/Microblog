@@ -24,6 +24,7 @@ jobs:
       - name: Build & Test Backend
         run: |
           cd microblog
+          chmod +x mvnw
           ./mvnw clean test
 
       - name: Deploy Backend to Render
