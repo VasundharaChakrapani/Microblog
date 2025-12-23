@@ -25,6 +25,7 @@ jobs:
         run: |
           cd microblog
           chmod +x mvnw
+          sed -i 's/\r$//' mvnw
           ./mvnw clean test
 
       - name: Deploy Backend to Render
