@@ -21,3 +21,7 @@ jobs:
           cd microblog
           mvn -v
           mvn clean test
+
+      - name: Deploy backend to Render
+        run: |
+          curl -X POST ${{ secrets.RENDER_BACKEND_DEPLOY_HOOK }}
