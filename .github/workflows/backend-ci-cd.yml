@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - backend/**
+      - microblog/**
 
 jobs:
   backend:
@@ -23,7 +23,7 @@ jobs:
 
       - name: Build & Test Backend
         run: |
-          cd backend
+          cd microblog
           ./mvnw clean test
 
       - name: Deploy Backend to Render
