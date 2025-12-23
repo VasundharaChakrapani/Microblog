@@ -26,7 +26,9 @@ public class SecurityConfig {
             .cors(Customizer.withDefaults()) // uses the CorsFilter bean
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
-                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll() // allow preflight first
+                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()// allow preflight first
+                     .requestMatchers("/", "/error").permitAll()   // 👈 ADD THIS
+ 
     .requestMatchers("/auth/**").permitAll() 
     .requestMatchers("/media/**").permitAll()  
     .requestMatchers(HttpMethod.DELETE, "/posts/**").authenticated()            // public endpoints
